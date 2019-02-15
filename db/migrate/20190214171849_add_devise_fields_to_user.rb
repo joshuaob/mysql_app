@@ -1,0 +1,22 @@
+class AddDeviseFieldsToUser < ActiveRecord::Migration[5.1]
+  def change
+    add_column :users, :encrypted_password, :string
+    add_column :users, :level, :string
+    add_column :users, :reset_password_token, :string
+    add_column :users, :reset_password_sent_at, :datetime
+    add_column :users, :remember_created_at, :datetime
+    add_column :users, :sign_in_count, :integer
+    add_column :users, :current_sign_in_at, :datetime
+    add_column :users, :last_sign_in_at, :datetime
+    add_column :users, :current_sign_in_ip, :string
+    add_column :users, :last_sign_in_ip, :string
+    add_column :users, :provider, :string
+    add_column :users, :uid, :string
+    add_column :users, :choice, :string
+    add_column :users, :number, :string
+    add_column :users, :image_file_name, :string
+    add_column :users, :image_content_type, :string
+    add_column :users, :image_file_size, :string
+    add_column :users, :image_updated_at, :datetime
+  end
+end
